@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "API Relay",
   "version": "1.0",
-  "description": "A sidebar to send GET and POST requests and view responses.",
+  "description": "The chrome extension to send GET and POST requests and view responses.",
   "permissions": ["sidePanel", "activeTab", "scripting", "storage"],
   "host_permissions": ["<all_urls>"],
   "action": {
