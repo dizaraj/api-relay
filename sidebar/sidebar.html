@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Request Sidebar</title>
+    <link rel="stylesheet" href="sidebar.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>API Tester</h1>
+
+        <!-- Request Method Selection -->
+        <div class="fieldset">
+            <label class="label">Request Method</label>
+            <div class="radio-group">
+                <label class="radio-label">
+                    <input type="radio" name="request-type" value="GET" class="form-radio" checked>
+                    <span>GET</span>
+                </label>
+                <label class="radio-label">
+                    <input type="radio" name="request-type" value="POST" class="form-radio">
+                    <span>POST</span>
+                </label>
+            </div>
+        </div>
+
+        <!-- URL Input -->
+        <div class="fieldset">
+            <label for="url-input" class="label">Endpoint URL</label>
+            <input type="url" id="url-input" placeholder="https://api.example.com/data" class="input-field">
+        </div>
+
+        <!-- Custom Headers Section -->
+        <div class="fieldset">
+            <label class="label">Headers</label>
+            <div id="headers-container">
+                <!-- Header rows will be added here dynamically -->
+            </div>
+            <button id="add-header-btn" class="button-secondary" type="button">+ Add Header</button>
+        </div>
+
+        <!-- POST Request Body -->
+        <div id="post-body-container" class="fieldset hidden">
+            <label for="post-body" class="label">Request Body (JSON)</label>
+            <textarea id="post-body" rows="6" class="textarea-field" placeholder='{ "key": "value" }'></textarea>
+        </div>
+
+        <!-- Send Button -->
+        <button id="send-request-btn" class="button">
+            Send Request
+        </button>
+
+        <!-- Response Area -->
+        <div class="fieldset">
+            <h2 class="label">Response</h2>
+            <div class="response-header">
+                <div class="radio-group response-view-selector">
+                    <label class="radio-label-sm"><input type="radio" name="response-view" value="auto"
+                            class="form-radio" checked><span>Auto</span></label>
+                    <label class="radio-label-sm"><input type="radio" name="response-view" value="text"
+                            class="form-radio"><span>Text</span></label>
+                    <label class="radio-label-sm"><input type="radio" name="response-view" value="image"
+                            class="form-radio"><span>Image</span></label>
+                    <label class="radio-label-sm"><input type="radio" name="response-view" value="headers"
+                            class="form-radio"><span>Headers</span></label>
+                </div>
+            </div>
+            <div id="response-container" class="response-box">
+                <!-- Response content will be shown here -->
+                <pre><code id="response-content-text"></code></pre>
+                <img id="response-content-image" src="" alt="API Response Image"
+                    style="display: none; max-width: 100%; height: auto;" />
+            </div>
+        </div>
+
+        <!-- Review Section -->
+        <div class="review-section">
+            <!-- <label class="label">Rate this Extension</label> -->
+            <div class="star-rating-container">
+                <a href="#" class="star" data-value="1"><svg width="24" height="24" fill="currentColor"
+                        viewBox="0 0 20 20">
+                        <path
+                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                        </path>
+                    </svg></a>
+                <a href="#" class="star" data-value="2"><svg width="24" height="24" fill="currentColor"
+                        viewBox="0 0 20 20">
+                        <path
+                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                        </path>
+                    </svg></a>
+                <a href="#" class="star" data-value="3"><svg width="24" height="24" fill="currentColor"
+                        viewBox="0 0 20 20">
+                        <path
+                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                        </path>
+                    </svg></a>
+                <a href="#" class="star" data-value="4"><svg width="24" height="24" fill="currentColor"
+                        viewBox="0 0 20 20">
+                        <path
+                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                        </path>
+                    </svg></a>
+                <a href="#" class="star" data-value="5"><svg width="24" height="24" fill="currentColor"
+                        viewBox="0 0 20 20">
+                        <path
+                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                        </path>
+                    </svg></a>
+            </div>
+            <button id="reviewBtn" class="button-secondary">☆ Leave a Review</button>
+        </div>
+
+        <div class="footer-links">
+            <a href="#" id="donateLink">Donate</a> |
+            <a href="#" id="aboutLink">Developer</a>
+        </div>
+
+    </div>
+
+    <script src="sidebar.js"></script>
+</body>
+
+</html>
