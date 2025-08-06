@@ -204,10 +204,6 @@ h1 {
     margin-bottom: 0;
 }
 
-.response-view-selector {
-    gap: 0.5rem;
-}
-
 .response-box {
     background-color: var(--response-bg-color);
     padding: 1rem;
