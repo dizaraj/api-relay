@@ -1,10 +1,10 @@
 # API Relay
 A lightweight and convenient Chrome extension that provides a sidebar to quickly test your API endpoints without leaving your current tab. Send GET and POST requests, add custom headers, and view responses in multiple formats.
 
-## Why Use This Extension?
+## 💯 Why Use This Extension?
 As a developer, you often need to quickly check an API endpoint or test a response. Switching between your browser, a code editor, and a dedicated API client like Postman can be cumbersome. This extension solves that by bringing a simple yet powerful API testing tool directly into your browser's sidebar. It's perfect for rapid testing, debugging, and development workflows.
 
-## How to Use
+## 📚 How to Use
 1. __Open the Sidebar__: Click the extension's icon in your Chrome toolbar to open the sidebar.
 2. __Select Method__: Choose either __GET__ or __POST__ for your request.
 3. __Enter URL__: Paste the full API endpoint URL you want to test.
@@ -22,7 +22,7 @@ As a developer, you often need to quickly check an API endpoint or test a respon
     
 ![Screenshot](screenshot.jpg)
 
-## Key Features
+## ⚙️ Key Features
 - __Convenient Sidebar UI__: No need to open a new tab or application.
 - __GET & POST Support__: Covers the most common HTTP methods for testing.
 - __Custom Headers__: Easily add any number of custom request headers, including authorization tokens.
@@ -30,7 +30,7 @@ As a developer, you often need to quickly check an API endpoint or test a respon
 - __Dark Mode Support__: Automatically adapts to your system's theme.
 - __Lightweight & Fast__: Built with vanilla JavaScript for optimal performance.
 
-## Permissions Explained
+## ✅ Permissions Explained
 This extension requests a few permissions to provide its features. Here’s why each one is needed:
 
 - `"sidePanel"`: This is the core permission that allows the extension to open its user interface in the browser's side panel.
@@ -39,14 +39,27 @@ This extension requests a few permissions to provide its features. Here’s why 
 
 - `"storage"`: This permission is planned for future updates to save your request history, making it easier to re-run previous tests. Your data is stored locally and is never transmitted.
 
-## Enjoying the Extension? Leave a Review!
+## ⭐ Enjoying the Extension? Leave a Review!
 If you find this tool helpful, please consider leaving a 5-star review on the Chrome Web Store! Your feedback helps the extension grow and motivates future development.
 
 You can rate it directly from the review section at the bottom of the extension's sidebar.
 
-## Support My Work
-This extension is a free, open-source project created in my spare time. If it has saved you time and made your development process easier, please consider supporting its continued development with a small donation. Every little bit helps!
+## 🔐 Privacy
+This extension is built with your privacy in mind. It does not collect, store, or transmit any user data. For more details, please read the full [Privacy Policy](./SECURITY.md).
 
-__Buy Me a Coffee__
+## 💬 Need Help!
+If you have any questions, require support, or have feedback, please feel free inbox me.
 
-Thank you for your support!
+- **Developer:** Dizaraj Dey
+- **Email:** [dizaraj@gmail.com](mailto:dizaraj@gmail.com)
+- **WhatsApp:** [+8801717035081](https://wa.me/8801717035081)
+- **Messenger:** [m.me/dizaraj](https://m.me/dizaraj)
+
+## ❤️ Support the Project
+**Feedback & Contributing:**
+Found a bug or have a feature request? Please open an issue on GitHub.
+Contributions are welcome! Feel free to fork the repository and submit a pull request.
+
+If you find it useful and would like to support its continued development, maintenance, and the creation of more helpful tools, please consider showing your appreciation. Your support is greatly valued!
+
+[![Buy Me a Coffee](https://img.shields.io/badge/Buy_Me_A_Coffee-ffdd00?style=for-the-badge&logo=buymeacoffee&logoColor=black)](https://coff.ee/dizaraj)
