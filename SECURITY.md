@@ -19,7 +19,6 @@ Since we do not collect any personal information, we do not use your information
 
 ## Permissions Explained
 The extension requires the following permissions to function correctly:
-
 - `"sidePanel"`: Allows the extension to display its user interface in the browser's side panel.
 - `"activeTab"`: Used to enable the side panel on your current tab. The extension does not read, track, or alter the content of any webpage you visit.
 
