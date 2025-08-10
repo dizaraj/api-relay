@@ -21,8 +21,7 @@ Since we do not collect any personal information, we do not use your information
 The extension requires the following permissions to function correctly:
 
 - `"sidePanel"`: Allows the extension to display its user interface in the browser's side panel.
-- `"activeTab"` & `"scripting"`: Used to enable the side panel on your current tab. The extension does not read, track, or alter the content of any webpage you visit.
-- `"storage"`: Used to store your request data (like headers and URLs) locally on your computer. This is for your convenience and for a planned future feature to save request history. This data is never transmitted off your machine.
+- `"activeTab"`: Used to enable the side panel on your current tab. The extension does not read, track, or alter the content of any webpage you visit.
 
 ## Data Storage
 All request data you enter is stored locally on your computer using the standard Chrome Storage API. This data is under your control and can be cleared at any time by clearing your browser data or by uninstalling the extension.

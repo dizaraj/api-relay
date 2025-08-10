@@ -35,9 +35,7 @@ This extension requests a few permissions to provide its features. Here’s why 
 
 - `"sidePanel"`: This is the core permission that allows the extension to open its user interface in the browser's side panel.
 
-- `"activeTab"` & `"scripting"`: These permissions are used together to enable the side panel on the currently active tab. The extension does not read or alter the content of the web pages you visit.
-
-- `"storage"`: This permission is planned for future updates to save your request history, making it easier to re-run previous tests. Your data is stored locally and is never transmitted.
+- `"activeTab"`: This is the permission to enable the side panel on the currently active tab. The extension does not read or alter the content of the web pages you visit.
 
 ## ⭐ Enjoying the Extension? Leave a Review!
 If you find this tool helpful, please consider leaving a 5-star review on the Chrome Web Store! Your feedback helps the extension grow and motivates future development.
